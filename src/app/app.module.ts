@@ -1,16 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+import { DemoComponent } from './demo/demo.component';
+// import { Baitap1Module } from './baitap1/baitap1.module';
+import { Baitap2Module } from './baitap2/baitap2.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  // ! declarations là nơi khai báo các component được quản lí bởi module
+  // app component đang được AppModule quản lý
+  // HomeModule: HeaderCOmponent, FooterComponent, ContentComponent
+  // => Để sử dụng các Component của HomeModule trong AppModule cần phải gắn HomeModule vào trong imports
+  // Những module do anglar cung cấp sẵn: RouterModule, FormModule, HttpClientModule
+  declarations: [AppComponent, DemoComponent],
+  // ! sau khi import ở trên thì cần tiếp tục imports ở dưới
+  imports: [BrowserModule, Baitap2Module],
+  // providers là nơi khai báo các service
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrap là khai báo AppComponent là component khởi chạy đầu tiên của module
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
