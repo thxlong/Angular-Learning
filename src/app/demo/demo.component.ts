@@ -8,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
 
   // `
   styleUrls: ['./demo.component.scss'],
-
-  
 })
 export class DemoComponent implements OnInit {
+
   constructor() {}
 
   ngOnInit(): void {}

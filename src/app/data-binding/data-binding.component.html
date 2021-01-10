@@ -1,0 +1,25 @@
+<!-- * binding theo kiểu: [Interpolation] -->
+
+<p>{{ message }}</p>
+
+<input value="{{ message }}" />
+
+<!-- * binding theo kiểu [Property binding] -->
+<!-- Nếu bọc property = dấu [] thì sẽ hiểu vế sau là 1 biến ==> binding data -->
+<input [value]="message" [disabled]="isActive" />
+
+<!-- * binding theo kiểu [Event binding] -->
+<input [value]="message" #messageRef />
+<button (click)="handleChangeMessage(messageRef)">Click</button>
+
+<p>{{ userName }}</p>
+<!-- ! $event cần đặt dấu $ trong ngoặc -->
+<input [value]="userName" (change)="handlerChangeUsername($event)" />
+
+<input [value]="userName" (input)="handlerChangeUsername($event)" />
+
+<!-- * binding theo kiểu: [two-way binding] -->
+<p>{{ email }}</p>
+<!-- *sử dụng param [(ngModel)] để binding theo kiểu two-way -->
+<input [(ngModel)]="email" />
+<!-- <input [value]="email" (input)='email = $event.target.value' /> -->
