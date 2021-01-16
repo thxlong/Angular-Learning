@@ -10,6 +10,8 @@ import { DirectivesModule } from './directives/directives.module';
 import { Baitap4Module } from './baitap4/baitap4.module';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
+import { InteractionModule } from './interaction/interaction.module';
+
 @NgModule({
   // ! declarations là nơi khai báo các component được quản lí bởi module
   // app component đang được AppModule quản lý
@@ -25,7 +27,7 @@ import { AttributeDirectivesComponent } from './attribute-directives/attribute-d
   ],
 
   // ! sau khi import ở trên thì cần tiếp tục imports ở dưới
-  imports: [BrowserModule, Baitap2Module, ComponentsModule, DirectivesModule],
+  imports: [BrowserModule, Baitap2Module, ComponentsModule, DirectivesModule,InteractionModule],
   // providers là nơi khai báo các service
   providers: [],
 
